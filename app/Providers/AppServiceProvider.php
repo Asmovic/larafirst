@@ -26,5 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         // Intead of Fillable
         Model::unguard();
+
+        // Use different template to style pagination
+        // Paginator::useBootstrapFive();
     }
 }
