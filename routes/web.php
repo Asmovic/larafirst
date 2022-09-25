@@ -25,9 +25,11 @@ Route::get('/listings/create', [ListingController::class, 'create'])->middleware
 // Store Listing Data
 Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
 
+// Manage Listings
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth');
+
 // Single Listings
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
 
 // Show Edit Form
 Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
@@ -53,6 +55,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // Log In User
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 
 /*     $listing = Listing::find($id);
     if ($listing) {
