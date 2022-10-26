@@ -49,7 +49,7 @@ class ListingController extends Controller
        ]);
 
        if($request->hasFile('logo')){
-        $formFields['logo'] = $request->file('logo')->store('public');
+        $formFields['logo'] = $request->file('logo')->store('', 'public');
        }
 
        $formFields['user_id'] = auth()->id();
@@ -75,7 +75,7 @@ class ListingController extends Controller
         ]);
      
         if($request->hasFile('logo')){
-         $formFields['logo'] = $request->file('logo')->store('public');
+         $formFields['logo'] = $request->file('logo')->store('', 'public');
         }
      
         $listing->update($formFields);
