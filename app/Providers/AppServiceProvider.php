@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Intead of Fillable
+        // Instead of Fillable
         Model::unguard();
 
         // Use different template to style pagination
